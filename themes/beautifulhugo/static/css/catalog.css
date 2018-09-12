@@ -1,0 +1,137 @@
+/*
+ *
+****************************************
+        Created By rockpanda
+
+      2018年9月12日 14:52:00;
+****************************************
+*
+*/
+
+/* 鼠标未放上去的效果*/
+#TableOfContents:first-of-type {
+    position: fixed;
+    z-index: 9999;
+    height: 40px;
+    width: 41px;
+    top: 200px;
+    right: 60px;
+    overflow: hidden;
+    background: url("data:image/png;base64,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") no-repeat;
+    background-size: 40px 40px;
+    text-indent: 0px;
+    background-position: center center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Microsoft YaHei" !important;
+    font-weight: 500 !important;
+}
+
+
+/* 鼠标放上去的效果 */
+#TableOfContents:first-of-type:hover {
+    background: none;
+    background-color: #ffffff;
+    z-index: 9999;
+    height: max-content;
+    max-height: 600px;
+    top: 92px;
+    right: 40px;
+    width: 350px;
+    bottom: 1px;
+    overflow-y: scroll;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+}
+
+
+
+/* 去掉目录前和边框的间距 */
+/* #TableOfContents:first-of-type:hover ul:first-child {
+    padding: 0;
+}
+ */
+
+/* 去掉目录前和边框的间距 */
+/* .toc-empty-item {
+    padding: 0;
+    display: none;
+} */
+
+
+
+
+
+/* 去掉菜单的小点 调整行高 */
+#TableOfContents li {
+    list-style-type: none;
+    margin: 0 0 0 0;
+}
+
+#TableOfContents li a {
+    display: block;
+    line-height: 37px;
+    height: 38px;
+    padding: 0 2px 0 6px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+#TableOfContents li a:hover {
+    background-color: #e9e8e8 !important;
+    text-decoration: none;
+}
+#TableOfContents li a:active,a:visited, a:focus, a:hover, a:active {
+    background-color: #e9e8e8 !important;
+    text-decoration: none;
+}
+#TableOfContents a {
+    color: #333 !important;
+    font-size: 14px !important;
+    overflow: hidden !important;
+    white-space: nowrap!important;
+    text-overflow: ellipsis !important;
+}
+/* .toc-empty-item {
+    height: 0px;
+} */
+
+
+/* 滚动条宽度 */
+#TableOfContents::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/*正常情况下滑块的样式*/
+#TableOfContents::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+}
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+#TableOfContents:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+}
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+#TableOfContents::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+}
+
+/*正常时候的主干部分*/
+#TableOfContents::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    background-color: white;
+}
+
+/*鼠标悬浮在滚动条上的主干部分*/
+#TableOfContents::-webkit-scrollbar-track:hover {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .01);
+}
